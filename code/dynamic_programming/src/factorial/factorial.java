@@ -3,7 +3,7 @@
 /**
  * Implements factorial using recursion
  */
-public class Factorial {
+public class factorial {
 
     private static int factorial(int num) {
         if (num == 0) {
