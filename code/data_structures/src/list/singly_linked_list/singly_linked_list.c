@@ -14,17 +14,16 @@ int main(void)
     };
     typedef struct node NODE;
  
-    NODE *head, *first, *temp = 0;
+    NODE *head, *first, *temp = NULL;  // its good to assign NULL to pointers as compared to 0;
     int count = 0;
     int choice = 1;
-    first = 0;
- 
+    first = NULL;
     while (choice)
     {
         head  = (NODE *)malloc(sizeof(NODE));
         printf("Enter the data item\n");
         scanf("%d", &head-> num);
-        if (first != 0)
+        if (first != NULL)
         {
             temp->ptr = head;
             temp = head;
@@ -36,10 +35,8 @@ int main(void)
         fflush(stdin);
         printf("Do you want to continue(Type 0 or 1)?\n");
         scanf("%d", &choice);
- 
     }
     temp->ptr = 0;
-    /*  reset temp to the beginning */
     temp = first;
     printf("\n status of the linked list is\n");
     while (temp != 0)
